@@ -70,6 +70,7 @@ sleep 1
 
 echo "Doing post-installation stuff..."
 systemctl --user enable pulseaudio.service
+sudo rm -rf /var/cache/pacman/pkg/*
 echo "Done!"
 sleep 1
 
