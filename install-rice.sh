@@ -10,7 +10,7 @@ printf "Press CTRL+C to cancel: "
 read accept
 
 echo "Installing packages..."
-sudo pacman -S --noconfirm base-devel xorg xorg-server xorg-xinit i3 mesa python python-pip git python-dbus fish neofetch code ranger termite exa rofi cmatrix htop feh compton playerctl pulseaudio pulseaudio-ctl noto-fonts scrot
+sudo pacman -S --noconfirm base-devel xorg xorg-server xorg-xinit i3 mesa python python-pip git python-dbus fish neofetch code ranger termite exa rofi cmatrix htop feh compton playerctl pulseaudio noto-fonts scrot
 sudo pacman -R --noconfirm i3lock # in conflict with i3-lock-fancy
 echo "Packages installed!"
 sleep 1
@@ -24,7 +24,7 @@ git clone https://aur.archlinux.org/yaourt.git
 cd yaourt
 makepkg -si
 cd ..
-yaourt -S google-chrome i3-lock-fancy-git micro nerd-fonts-hack spotify polybar
+yaourt -S google-chrome i3lock-fancy-git micro nerd-fonts-hack spotify polybar pulseaudio-ctl
 echo "AUR packages installed!"
 sleep 1
 
