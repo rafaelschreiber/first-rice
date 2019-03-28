@@ -15,6 +15,11 @@ sudo pacman -R --noconfirm i3lock # in conflict with i3-lock-fancy
 echo "Packages installed!"
 sleep 1
 
+echo "Installing needed PGP keys for AUR packages..."
+gpg --recv-keys A87FF9DF48BF1C90
+echo "Keys added!"
+sleep 1
+
 echo "Installing AUR packages"
 git clone https://aur.archlinux.org/package-query.git
 cd package-query
@@ -62,3 +67,11 @@ sudo bash -c "echo 'options hid_apple fnmode=2' > /etc/modprobe.d/hid_apple.conf
 sudo mkinitcpio -p linux
 echo "Patches applied!"
 sleep 1
+
+echo "Doing post-installation stuff..."
+systemctl --user enable pulseaudio.service
+echo "Done!"
+sleep 1
+
+echo "Rebooting..."
+reboot
