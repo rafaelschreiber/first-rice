@@ -1,0 +1,4 @@
+# Author:       Rafael Schreiber
+# Date:         28-03-2019 
+
+keycode 64 = ISO_Level3_Shift # some wreid apple keyboard shit
